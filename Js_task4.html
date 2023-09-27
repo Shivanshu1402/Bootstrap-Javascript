@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_Task_4</title>
+    <style>
+        .Js_Task_4 {
+            margin:auto;
+            margin-top: 10%;
+            padding: 10px;
+            width: 30%;
+            border: 2px solid;
+            background-color:azure;
+            border-color:dimgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Js_Task_4">
+        <input type="button" onclick="date()" value="Show Date" /><br>
+        <p id="a"></p>
+
+        <input type="button" onclick="time()" value="Show Time" /><br>
+        <p id="b"></p><br>
+
+    </div>
+
+    <script>
+        function time() {
+            var date = new Date();
+            document.getElementById("b").innerHTML = date;
+
+        }
+        function date() {
+            var date = new Date();
+            const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var current_date = date.getDate() + "/" + month[date.getMonth()]+ "/" + date.getFullYear();
+            document.getElementById("a").innerHTML = current_date;
+        }
+    </script>
+
+</body>
+
+</html>

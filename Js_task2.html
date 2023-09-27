@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Js-Task-2</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-emphasis-color: white;
+        }
+
+        .task2 {
+            margin: auto;
+            margin-top: 10%;
+            padding: 10px;
+            width: 30%;
+            background-color:azure;
+            border: 2px solid;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="task2">
+        <b>
+            <h1>Letters in Alphabetical Order</h1>
+        </b>
+        <label for="inputString">Enter string:</label>
+        <input type="text" id="inputString">
+        <button onclick="sortString()">Sort</button>
+        <div id="result1"></div>
+    </div>
+
+    <script>
+        function sortString() {
+            var inputString = document.getElementById("inputString").value;
+            var sortedString = inputString.toLowerCase().split('').sort().join('');
+            document.getElementById("result1").innerHTML = "Sorted String: " + sortedString;
+        }
+    </script>
+
+</body>
+
+</html>
